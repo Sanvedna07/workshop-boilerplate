@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-export default function decorate(block) {
+export default function decorateOld(block) {
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -21,4 +21,13 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+}
+
+export default function decorate(element, fieldJson, container, formId) {
+	element.classList.add('card');
+	element.querySelectorAll('.radio-wrapper').forEach((radioWrapper) => {
+	const image = createOptimizedPicture('https://main--afb--jalagari.hlx.live/lab/images/card.png', 'card-image');
+	radioWrapper.appendChild(image);
+});
+return element;
 }
