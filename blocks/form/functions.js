@@ -61,15 +61,13 @@ export {
   getFullName, days, submitFormArrayToString, maskMobileNumber,
 };
 
-/**
+// Masks the first 5 digits of the mobile number with *
 
-* Masks the first 5 digits of the mobile number with *
+// @param {*} mobileNumber
 
-* @param {*} mobileNumber
+//@returns {string} returns the mobile number with first 5 digits masked
 
-* @returns {string} returns the mobile number with first 5 digits masked
 
-*/
 
 function maskMobileNumber(mobileNumber) {
 
